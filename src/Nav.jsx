@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 
@@ -63,7 +63,15 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn font-serif ">In</a>
+    <Link to='/login' >
+    <a className="btn bg-white font-serif ">In
+
+
+    <img className=" h-[30px]" src="https://cdn-icons-gif.flaticon.com/6569/6569164.gif" alt="" />
+    </a>
+    
+    </Link>
+  
   </div>
 </div>
             

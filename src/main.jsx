@@ -8,6 +8,11 @@ import {
 } from "react-router-dom";
 import Root from './Root';
 import Home from './Home';
+import Contact from './contact file/Contact';
+import Shop from './shop file/Shop';
+import Menu from './menu file/Menu';
+import Logins from './firebase files/Logins';
+import SignOut from './firebase files/SignOut';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +22,30 @@ const router = createBrowserRouter([
       {
         path: "/",
         element:  <Home></Home>  ,
+      },
+      {
+        path: "/contact",
+        element:  <Contact></Contact>  ,
+      },
+      {
+        path: "/shop",
+        element:  <Shop></Shop> ,
+      },
+      {
+        path: "/menu",
+        element:  <Menu></Menu> ,
+      },
+      {
+        path: "/dash",
+        element:  <Menu></Menu> ,
+      },
+      {
+        path: "/login",
+        element:  <Logins></Logins> ,
+      },
+      {
+        path: "/signOut",
+        element:  <SignOut></SignOut> ,
       },
     ],
   },
