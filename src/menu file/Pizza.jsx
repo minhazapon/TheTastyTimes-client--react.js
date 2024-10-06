@@ -8,11 +8,10 @@ const Pizza = () => {
   const [pizza, setPizza] = useState([])
 
   useEffect( () =>{
-
+    
      fetch('http://localhost:5000/menuData')
      .then( res => res.json())
      .then( data => setPizza(data) )
-
 
   } , [])
 
