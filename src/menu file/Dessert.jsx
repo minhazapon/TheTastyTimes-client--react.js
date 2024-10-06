@@ -1,7 +1,21 @@
+import { useEffect, useState } from "react";
+import DessertDetails from "./DessertDetails";
 
 
 
 const Dessert = () => {
+
+
+    const [des, setDes] = useState([])
+
+    useEffect( () =>{
+
+       fetch('http://localhost:5000/menuData')
+       .then( res => res.json())
+       .then( data => setDes(data) )
+
+
+    } , [])
 
 
     return (
@@ -20,6 +34,16 @@ const Dessert = () => {
               </div>
             </div>
             
+            
+
+            <div className=" flex justify-center mt-10  mb-10 ml-10 mr-10">
+              <div className=" grid  md:grid-cols-4 gap-5">
+                   {
+                      des.map( des => <DessertDetails des={des} ></DessertDetails> )
+                   }
+              </div>
+            </div>
+
         </div>
     );
 };

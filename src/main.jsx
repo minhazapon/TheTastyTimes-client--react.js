@@ -13,6 +13,7 @@ import Shop from './shop file/Shop';
 import Menu from './menu file/Menu';
 import Logins from './firebase files/Logins';
 import SignOut from './firebase files/SignOut';
+import DashBoard from './dashboard file/DashBoard';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dash",
-        element:  <Menu></Menu> ,
+        element:  <DashBoard></DashBoard> ,
       },
       {
         path: "/login",

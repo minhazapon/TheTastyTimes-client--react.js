@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import OfferDetails from "./OfferDetails";
 
 
 
@@ -11,7 +12,9 @@ const Offer = () => {
     useEffect( () => {
 
 
-
+        fetch('http://localhost:5000/menuData')
+        .then( res => res.json())
+        .then(data => setOffer(data))
 
 
 
@@ -20,7 +23,7 @@ const Offer = () => {
 
 
     return (
-        <div className=" mt-10 mb-10 ml-5 mr-5">
+        <div className=" mt-10 mb-10 ml-10 mr-10">
 
             <div>
 
@@ -32,7 +35,28 @@ const Offer = () => {
 
 
 
+            <div className=" flex justify-center mt-10">
+                <div className=" grid   md:grid-cols-4 gap-5 ">
 
+
+
+
+                    {
+
+                        
+                          offer.map( offer => <OfferDetails offer={offer}></OfferDetails> )
+
+
+
+                    }
+
+
+
+
+
+
+                </div>
+            </div>
 
 
 

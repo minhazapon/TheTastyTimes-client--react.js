@@ -1,7 +1,22 @@
+import { useEffect, useState } from "react";
+import PizzaDetails from "./PizzaDetails";
 
 
 
 const Pizza = () => {
+
+  const [pizza, setPizza] = useState([])
+
+  useEffect( () =>{
+
+     fetch('http://localhost:5000/menuData')
+     .then( res => res.json())
+     .then( data => setPizza(data) )
+
+
+  } , [])
+
+
     return (
         <div>
 
@@ -15,6 +30,15 @@ const Pizza = () => {
               <div className="">
                   <h1 className="mb-5 text-6xl font-bold font-serif text-white  ">Pizza</h1>
                 </div>
+              </div>
+            </div>
+
+
+            <div className=" flex justify-center mt-10  mb-10 ml-10 mr-10">
+              <div className=" grid  md:grid-cols-4 gap-5">
+                   {
+                      pizza.map( pizza =>  <PizzaDetails pizza={pizza} ></PizzaDetails> )
+                   }
               </div>
             </div>
             

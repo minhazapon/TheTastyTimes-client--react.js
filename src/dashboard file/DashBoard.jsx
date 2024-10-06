@@ -8,6 +8,6 @@ const DashBoard = () => {
             
         </div>
     );
-};
+}; 
 
 export default DashBoard;
