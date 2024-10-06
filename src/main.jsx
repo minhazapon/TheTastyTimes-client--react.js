@@ -14,6 +14,7 @@ import Menu from './menu file/Menu';
 import Logins from './firebase files/Logins';
 import SignOut from './firebase files/SignOut';
 import DashBoard from './dashboard file/DashBoard';
+import AddProducts from './add products file/AddProducts';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/signOut",
         element:  <SignOut></SignOut> ,
+      },
+      {
+        path: "/addProducts",
+        element:  <AddProducts></AddProducts> ,
       },
     ],
   },

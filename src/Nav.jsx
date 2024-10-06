@@ -12,6 +12,7 @@ const Nav = () => {
        <li className=" font-serif" ><NavLink to='/dash' >Dashboard</NavLink></li>
        <li className=" font-serif" ><NavLink to='/menu' >Menu</NavLink></li>
        <li className=" font-serif" ><NavLink to='/shop' >Shop</NavLink></li>
+       <li className=" font-serif" ><NavLink to='/addProducts' >Add Food</NavLink></li>
     
     
     

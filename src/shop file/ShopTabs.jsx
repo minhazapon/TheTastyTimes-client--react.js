@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ShopDessert from '../DessertShop file/ShopDessert';
 
 const ShopTabs = () => {
 
@@ -21,7 +22,7 @@ const ShopTabs = () => {
             <Tab>Salad</Tab>
             <Tab>Soup</Tab>
             </TabList>
-            <TabPanel></TabPanel>
+            <TabPanel> <ShopDessert></ShopDessert> </TabPanel>
             <TabPanel></TabPanel>
             <TabPanel></TabPanel>
             <TabPanel></TabPanel>
