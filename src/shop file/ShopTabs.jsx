@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ShopDessert from '../DessertShop file/ShopDessert';
+import PizzaShop from '../pizzaShop file/PizzaShop';
 
 const ShopTabs = () => {
 
@@ -23,7 +24,7 @@ const ShopTabs = () => {
             <Tab>Soup</Tab>
             </TabList>
             <TabPanel> <ShopDessert></ShopDessert> </TabPanel>
-            <TabPanel></TabPanel>
+            <TabPanel> <PizzaShop></PizzaShop> </TabPanel>
             <TabPanel></TabPanel>
             <TabPanel></TabPanel>
             </Tabs>
