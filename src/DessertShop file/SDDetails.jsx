@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -16,7 +17,10 @@ const SDDetails = ({ image, name, para }) => {
             	</div>
             	<p className="text-gray-100"> {para} </p>
                 <div>
+                    <Link to='/addForm' >
                     <button className=" btn mt-5 ">Add Cart</button>
+                    </Link>
+                    
                 </div>
             </div>
             

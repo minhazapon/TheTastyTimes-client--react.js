@@ -25,8 +25,8 @@ const ShopTabs = () => {
             </TabList>
             <TabPanel> <ShopDessert></ShopDessert> </TabPanel>
             <TabPanel> <PizzaShop></PizzaShop> </TabPanel>
-            <TabPanel></TabPanel>
-            <TabPanel></TabPanel>
+            <TabPanel> <PizzaShop></PizzaShop> </TabPanel>
+            <TabPanel> <PizzaShop></PizzaShop></TabPanel>
             </Tabs>
 
 

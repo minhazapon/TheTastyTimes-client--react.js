@@ -15,6 +15,23 @@ import Logins from './firebase files/Logins';
 import SignOut from './firebase files/SignOut';
 import DashBoard from './dashboard file/DashBoard';
 import AddProducts from './add products file/AddProducts';
+import AddForm from './form and  crud file/AddForm';
+
+
+
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import ReadData from './form and  crud file/ReadData';
+import Update from './form and  crud file/Update';
+
+
+// Create a client
+const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
   {
@@ -51,7 +68,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/addProducts",
-        element:  <AddProducts></AddProducts> ,
+        element: <ReadData></ReadData> ,
+      },
+      {
+        path: "/addForm",
+        element: <AddForm></AddForm> ,
+      },
+      {
+        path: "/update/:id",
+        element:  <Update></Update> ,
+        loader: ({params}) => fetch(`http://localhost:5000/addData/${params.id}`)
       },
     ],
   },
@@ -59,6 +85,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+     <RouterProvider router={router} />
+    </QueryClientProvider>
   </StrictMode>,
 )
